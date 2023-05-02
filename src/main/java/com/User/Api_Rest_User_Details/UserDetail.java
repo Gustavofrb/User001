@@ -13,9 +13,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@AllArgsConstructor
-@NoArgsConstructor
-@Data
+
 public class UserDetail implements UserDetails {
 
 	private final Optional<User> user = this.getUser();

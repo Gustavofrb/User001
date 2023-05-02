@@ -33,7 +33,6 @@ public class JwtAutenticathionFilter extends UsernamePasswordAuthenticationFilte
 		this.authenticationmanager = authenticationmanager;
 	}
 	
-	@Override
 	public Authentication attemptAuthentication(HttpServletRequest request, 
 												HttpServletResponse response) throws AuthenticationException {
 		try {
@@ -53,7 +52,6 @@ public class JwtAutenticathionFilter extends UsernamePasswordAuthenticationFilte
 	
 	}
 	
-	@Override
 	protected void successfulAuthentication(HttpServletRequest request,
 	                                            HttpServletResponse response,
 	                                            FilterChain chain,
@@ -68,4 +66,4 @@ public class JwtAutenticathionFilter extends UsernamePasswordAuthenticationFilte
 	       response.getWriter().write(token);
 	       response.getWriter().flush();
 	}
-	}
+}
